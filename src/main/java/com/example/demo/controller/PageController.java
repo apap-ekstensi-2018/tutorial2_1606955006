@@ -16,7 +16,7 @@ public class PageController {
 	}
 	
 	@RequestMapping("/greeting")
-	public String index(@RequestParam(value = "name", required=false) String name, Model model) {
+	public String index(@RequestParam(value = "name") String name, Model model) {
 		model.addAttribute("name", name);
 		return "greeting";
 	}
